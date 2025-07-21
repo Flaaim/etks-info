@@ -1,0 +1,12 @@
+{
+    "require": {
+        "symfony/yaml": "^6.4",
+        "league/commonmark": "^2.7",
+        "twig/twig": "^3.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

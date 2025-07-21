@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+{% assign data = site.data[page.data_file] %}
+
+<div class="profession">
+    <h1>Профессия {{ page.title }}</h1>
+
+    <a href="{{ page.return_url }}" class="return-link">← Назад в раздел</a>
+
+    <div class="meta-info">
+        <p><strong>№ выпуска:</strong> {{ data[0].title }}</p>
+        <p><strong>Документ:</strong> {{ data[0].npa }}</p>
+        <p><strong>Раздел:</strong> {{ page.section }}</p>
+    </div>
+
+    <h2>Тарифно-квалификационные характеристики</h2>
+
+    {% for rank in page.ranks %}
+    <div class="rank">
+        <h3>Разряд {{ rank.level }}</h3>
+
+        <div class="job">
+            <h5>Характеристика работ:</h5>
+            <div class="text-content">
+                {{ rank.job | markdownify }}
+            </div>
+        </div>
+
+        <div class="must-able">
+            <h3>Должен уметь:</h3>
+            <div class="text-content">
+                {{ rank.must_able | markdownify }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
