@@ -27,6 +27,7 @@ class Writer implements IWriter
 
     public function render(): void
     {
+        $this->dir->makeDir();
         $releasePath = $this->renderRelease();
         foreach ($this->release->getSections() as $section) {
             $sectionPath = $this->renderSections($releasePath, $section);

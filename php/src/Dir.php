@@ -13,10 +13,9 @@ class Dir
     {
         return dirname(__DIR__, 2).self::BASE_DIR;
     }
-    public function makeDir(string $slug, string $path = null): string
+    public function makeDir(string $slug = '', string $path = null): string
     {
-        $pathDir = !$path ? self::getDir() : $path;
-        $fullPath = $pathDir.'/'.$slug;
+        $fullPath = $this->getFullPath($slug, $path);
         if(is_dir($fullPath)){
             $this->deleteDirectory($fullPath);
         }
@@ -43,5 +42,11 @@ class Dir
         }
 
         return rmdir($dir);
+    }
+
+    private function getFullPath(string $slug = '', string $path = null): string
+    {
+        $pathDir = !$path ? self::getDir() : $path;
+        return $pathDir.'/'.$slug;
     }
 }
