@@ -1,18 +1,12 @@
 ---
 layout: page
-title: About
+title: О проекте
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Данный проект создан в помощь специалистам для быстрого поиска нужной профессии в справочнике ЕТКС. Проект представляет собой онлайн справочник работ и профессий рабочих.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Если вы нашли ошибку в справочнике, пожалуйста [напишите](https://t.me/flaaim) мне об этом. 
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Мой телеграм канал: [@help_ot_news](https://t.me/help_ot_news)
 
-
-[jekyll-organization]: https://github.com/jekyll
