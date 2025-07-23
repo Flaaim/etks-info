@@ -6,6 +6,7 @@ layout: default
 
 <h1>ЕТКС - {{ data[0].title }}</h1>
 Документ: {{ data[0].npa }}
+<div class="section">
 {% for section in data[0].sections %}
 <h2>{{ section.name }}</h2>
 
@@ -20,5 +21,6 @@ layout: default
 </ul>
 {% endfor %}
 <p>
-    <a href="/{{ data[0].release_id }}/">Вернуться</a>
+    <a href="/{{ data[0].release_id }}/" class="return-link">← Вернуться</a>
 </p>
+</div>
