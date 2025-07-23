@@ -60,7 +60,7 @@ class Writer implements IWriter
     public function renderProfessions(string $sectionPath, Profession $profession, Section $section): void
     {
         $professionPath = $this->dir->makeDir($profession->slug, $sectionPath);
-        $filename = $this->getFullFilename($professionPath, $profession->slug);
+        $filename = $this->getFullFilename($professionPath, 'index');
         $markdown = $this->twig->render($this->template->get('profession'), [
             'profession' => $profession,
             'section' => $section,
