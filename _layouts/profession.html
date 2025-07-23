@@ -42,6 +42,14 @@ layout: default
             </div>
         </div>
         {% endif %}
+        {% if rank.work_examples != empty %}
+        <div class="work_examples">
+            <h5>Примеры работ:</h5>
+            <div class="text-content">
+                {{ rank.work_examples | markdownify }}
+            </div>
+        </div>
+        {% endif %}
     </div>
     {% endfor %}
 </div>
