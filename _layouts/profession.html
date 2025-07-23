@@ -10,9 +10,9 @@ layout: default
     <a href="{{ page.return_url }}" class="return-link">← Назад в раздел</a>
 
     <div class="meta-info">
-        <p><strong>№ выпуска:</strong> {{ data[0].title }}</p>
-        <p><strong>Документ:</strong> {{ data[0].npa }}</p>
-        <p><strong>Раздел:</strong> {{ page.section }}</p>
+        <p><strong>№ выпуска ЕТКС:</strong> <a href="/{{ data[0].release_id }}/">{{ data[0].title }}</a><br>
+       <strong>Документ:</strong> {{ data[0].npa }}<br>
+        <strong>Раздел:</strong> <a href="{{ page.return_url }}">{{ page.section }}</a></p>
     </div>
 
     <h2>Тарифно-квалификационные характеристики</h2>
@@ -29,11 +29,19 @@ layout: default
         </div>
 
         <div class="must-able">
-            <h3>Должен уметь:</h3>
+            <h5>Должен уметь:</h5>
             <div class="text-content">
                 {{ rank.must_able | markdownify }}
             </div>
         </div>
+        {% if rank.education != empty %}
+        <div class="education">
+            <h5>Образование:</h5>
+            <div class="text-content">
+                {{ rank.education | markdownify }}
+            </div>
+        </div>
+        {% endif %}
     </div>
     {% endfor %}
 </div>
