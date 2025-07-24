@@ -1,0 +1,18 @@
+---
+layout: profession
+title: "{{ profession.name }}"
+data_file: "{{ release.release_id }}"
+description: Профессия "{{ profession.name }}" из ЕТКС {{ release.title }} раздел "{{ section.name }}"
+permalink: /{{ release.release_id }}/{{ section.section_id }}/{{ profession.slug }}.html
+return_url: /{{ release.release_id }}/{{ section.section_id }}/
+nav_exclude: true
+section: "{{ section.name }}"
+ranks:
+{% for rank in profession.ranks %}
+    - level: {{ rank.level }}
+      job: "{{ rank.job }}"
+      must_able: "{{ rank.must_able }}"
+      education: "{{ rank.education }}"
+      work_examples: "{{ rank.work_examples }}"
+{% endfor %}
+---
