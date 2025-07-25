@@ -15,7 +15,7 @@ host('production')
     ->set('hostname', '31.31.198.114')
     ->set('port', 22)
     ->set('remote_user', 'u1656040')
-    ->set('deploy_path', '~/www/etks-info')
+    ->set('deploy_path', '~/www/etks-info.ru')
     ->set('public_path', '{{deploy_path}}/public')
     ->set('branch', 'master');
 

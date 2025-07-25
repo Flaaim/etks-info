@@ -7,6 +7,8 @@ deploy: build
 	git add . && \
 	git commit --quiet -m "Update production" && \
 	git push origin master
+	@cd ./php && \
+	dep deploy production
 	@echo "✅ Done.."
 
 
